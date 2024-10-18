@@ -25,8 +25,8 @@ void displayUserManu(User& user){
 		<< "4. Display All Posts\n"
 		<< "5. Display Kth Post\n"
 		<< "6. Modify Post\n"
-		<< "7. Edit Post\n"
-		<< "8. Delete Post\n"
+		<< "7. Delete Post\n"
+		<< "8. Edit Post\n"
 		<< "0. Logout\n"
 		<< "Choice: ";
 		cin >> userChoice;
@@ -173,6 +173,28 @@ void displayUserManu(User& user){
 				break;
 			}
 			case 7: {
+				// Asks user for the index of the post that they would like to delete, then deletes it.
+				// Displays error message and prompts for an index again if previous input is invalid.
+				int index;
+				while (true){
+					cout << "Enter in a number k to delete the post at that index: ";
+					cin.clear();
+					cin >> index;
+					if (index > user.number_of_posts() && index > 0){
+						if (user.number_of_posts() < 1){
+							cout << "There are no posts to delete at the moment. Please create one before trying again. " << endl;
+						} else {
+							cout << "Error, the minimum index is 1 and the maximum index of the posts is " << user.number_of_posts() << ". " << endl;
+						}
+					} else {
+						break;
+					}
+				}
+
+				user.delete_post(index);				
+				break;
+			}
+			case 8: {
 				// Asks user for an index to the post that they would like to edit.
 				// Finds post, edits it, and prints confirmation of it.
 				int index;
@@ -194,28 +216,6 @@ void displayUserManu(User& user){
 				user.edit_post(index);
 				break;
 				
-			}
-			case 8: {
-				// Asks user for the index of the post that they would like to delete, then deletes it.
-				// Displays error message and prompts for an index again if previous input is invalid.
-				int index;
-				while (true){
-					cout << "Enter in a number k to delete the post at that index: ";
-					cin.clear();
-					cin >> index;
-					if (index > user.number_of_posts() && index > 0){
-						if (user.number_of_posts() < 1){
-							cout << "There are no posts to delete at the moment. Please create one before trying again. " << endl;
-						} else {
-							cout << "Error, the minimum index is 1 and the maximum index of the posts is " << user.number_of_posts() << ". " << endl;
-						}
-					} else {
-						break;
-					}
-				}
-
-				user.delete_post(index);				
-				break;
 			}
 			case 0: {
 				cout << "Logging you out. " << endl;
