@@ -3,7 +3,7 @@
 
 class Instagram340 {
 	private:
-		LinkedBag<User> users;
+		LinkedBag<shared_ptr<User>> users;
 		
 	public:
 		// Constructor and destructor
@@ -11,9 +11,9 @@ class Instagram340 {
 		~Instagram340();
 
 		// Create user function
-		void createUser(const std::string& username, const std::string& email, const std::string& password,
-						const std::string& bio, const std::string& profilePicture);
+		void createUser(std::string& username, std::string& email, std::string& password,
+						std::string& bio, std::string& profilePicture);
 
 		// Get user based on position in list
-		User getUser(const int& indexK);
+		shared_ptr<User> getUser(const int& indexK);
 };

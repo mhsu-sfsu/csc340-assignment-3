@@ -52,23 +52,23 @@ void User::display_info(){
 }
 
 // Create functions for reels and stories respectively. 
-// Takes a title, duration, and url and insers a pointer to the post into the user's post list
+// Takes a title, duration, and url and insers a shared pointer to the post into the user's post list
 void User::create_reel(string title, int duration, string url){
-	Reel* newReel = new Reel(title, duration, url);
-	posts.append(newReel);
+	shared_ptr<Reel> newReelsptr(new Reel(title, duration, url)); // Creating the reel and the shared pointer that points to it
+	posts.append(newReelsptr); // Appending to list
 }
 
 void User::create_story(string title, int duration, string url){
-	Story* newStory = new Story(title, duration, url);
-	posts.append(newStory);
+	shared_ptr<Story> newStorysptr(new Story(title, duration, url)); // Creating the story and the shared pointer that points to it
+	posts.append(newStorysptr); // Appending to list
 }
 
 // Displays all of the user's posts
 void User::display_all_posts(){
 	// No posts are searched for unless there are posts in the list.
 	if (has_posts()){ 
-		Node<Post*> *curptr = posts.findKthItem(1); // Setting the first pointer to the first node (head)
-		Node<Post*> *nextptr = curptr->getNext(); // Setting the second pointer to point to the node after the first
+		Node<shared_ptr<Post>> *curptr = posts.findKthItem(1); // Setting the first pointer to the first node (head)
+		Node<shared_ptr<Post>> *nextptr = curptr->getNext(); // Setting the second pointer to point to the node after the first
 
 		while (curptr != nullptr) { // Displays the post as long as the pointer is not null 
 			curptr->getItem()->display_post();
@@ -86,7 +86,7 @@ void User::display_all_posts(){
 // Using that, the contents of the node can be accessed and printed
 void User::display_specific_post(int postnum){
 	if (has_posts() && postnum > 0){
-		Node<Post*> *postptr = posts.findKthItem(postnum); // Setting the first pointer to the post at the index specified.
+		Node<shared_ptr<Post>> *postptr = posts.findKthItem(postnum); // Setting shared pointed to the post at the index specified
 
 		postptr->getItem()->display_post(); // After getting the pointer, the post can be accessed and printed using runtime polymorphism.
 
@@ -104,10 +104,10 @@ void User::display_specific_post(int postnum){
 void User::modify_post(int postnum, string newtitle){
 	if (has_posts()){
 		if (valid_index(postnum)){
-			Node<Post*>* postptr = posts.findKthItem(postnum); // Creating pointer to the node with the item to modify
-			Post* tomodify = postptr->getItem(); // Setting pointer tomodify to have contents of the item
-			tomodify->set_title(newtitle); // Modifying the post
-			postptr->setItem(tomodify); //Setting the item in the node to the modified item
+			Node<shared_ptr<Post>> *postptr = posts.findKthItem(postnum); // Creating pointer to the node with the item to modify
+			Node<shared_ptr<Post>> tomodify(postptr->getItem()); // Setting pointer tomodify to have contents of the item
+			((tomodify.getItem()).get())->set_title(newtitle); // Modifying the post
+			postptr->setItem(tomodify.getItem()); //Setting the item in the node to the modified item
 		} else {
 			// Print statement for invalid index
 			cout << "Invalid index, the minimum index is 1 and the maximum index that can be entered is currently " << posts.getCurrentSize() << "." << endl;
@@ -123,7 +123,7 @@ void User::modify_post(int postnum, string newtitle){
 void User::edit_post(int postnum){
 	if (has_posts()){
 		if (valid_index(postnum)){
-			Node<Post*> *postptr = posts.findKthItem(postnum); // Pointer to the post we would like to edit
+			Node<shared_ptr<Post>> *postptr = posts.findKthItem(postnum); // Pointer to the post we would like to edit
 			postptr->getItem()->edit_post(); // Using the pointer to access the post and the edit_post() method in the child classes.
 		} else {
 			// Print statement for invalid index
@@ -140,7 +140,8 @@ void User::edit_post(int postnum){
 void User::delete_post(int postnum){ // user remove method from node class to delete item
 	if (has_posts()){
 		if (valid_index(postnum)){
-			Node<Post*>* postptr = posts.findKthItem(postnum); // Pointer to node with post to delete
+			Node<shared_ptr<Post>> *postptr = posts.findKthItem(postnum); // Pointer to node with post to delete
+			cout << "current counter for this post:" << (postptr->getItem()).use_count() << endl;
 			posts.remove((*postptr).getItem());
 		} else {
 			// Print statement for invalid index

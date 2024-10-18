@@ -24,7 +24,7 @@ class User{
         string password;
         string bio;
         string profilepicture;
-        LinkedBag<Post*> posts;
+        LinkedBag<shared_ptr<Post>> posts;
 
     public:
         // Constructors and destructor

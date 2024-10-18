@@ -44,6 +44,9 @@ void displayUserManu(User& user){
 				string newpw = "";
 				getline(cin >> ws, newpw);
 				user.set_password(newpw);
+
+				//TO DELETE (testing purposes):
+				cout << "new password: " << user.get_password() << endl;
 				break;
 			}
 			case 3: { 
@@ -236,25 +239,31 @@ int main(){
 
 	cout << "\nWelcome to Instagram340:" << endl;
 
-	cout << "Please enter a username for your account: ";
-	string username;
-	getline(cin >> ws, username);
+	// cout << "Please enter a username for your account: ";
+	// string username;
+	// getline(cin >> ws, username);
 
-	cout << endl << "Please enter an email address for your account: ";
-	string email;
-	getline(cin >> ws, email);
+	// cout << endl << "Please enter an email address for your account: ";
+	// string email;
+	// getline(cin >> ws, email);
 
-	cout << endl << "Please enter a password for your account: ";
-	string password;
-	getline(cin >> ws, password);
+	// cout << endl << "Please enter a password for your account: ";
+	// string password;
+	// getline(cin >> ws, password);
 
-	cout << endl << "Please enter a short bio for your account: ";
-	string bio;
-	getline(cin >> ws, bio);
+	// cout << endl << "Please enter a short bio for your account: ";
+	// string bio;
+	// getline(cin >> ws, bio);
 
-	cout << endl << "Please enter the path to the profile picture for your account: ";
-	string profilepic;
-	getline(cin >> ws, profilepic);
+	// cout << endl << "Please enter the path to the profile picture for your account: ";
+	// string profilepic;
+	// getline(cin >> ws, profilepic);
+
+	string username = "meg";
+	string email = "email@gmail.com";
+	string password = "pw";
+	string bio = "bio here";
+	string profilepic = "url here";
 
 	instagram.createUser(username, email, password, bio, profilepic);	
 
@@ -262,9 +271,9 @@ int main(){
 	// User is set to 1 because if we are asking for the first user then we'd assume that 1 = first.
 	// All functions in this program are coded in this manner.
 
-	User currentUser = instagram.getUser(1); 
+	shared_ptr<User> currentUser = instagram.getUser(1); 
 
-	displayUserManu(currentUser);
+	displayUserManu(*currentUser.get());
 				
 	return 0;
 }
