@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/meghsu/Desktop/SFSU/CSC340/csc340-assignment2/LinkedBagDS",
+      "program": "/Users/meghsu/Desktop/SFSU/CSC340/csc340-assignment2/LinkedBagDS/build/Debug/outDebug"
+    }
+  ]
+}

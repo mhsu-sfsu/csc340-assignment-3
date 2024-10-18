@@ -1,0 +1,302 @@
+
+Welcome to Instagram340:
+
+Please enter a username for your account: meg
+
+Please enter an email address for you account: someemail@gmail.com
+
+Please enter a password for your account: password
+
+Please enter a short bio for your account: short bio
+
+Please enter the path to the profile picture for your account: somethingsomethingpfp
+
+Hi, meg, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 1
+
+Here is your account information: 
+Username: meg
+Email address: someemail@gmail.com
+Bio: short bio
+Profile picture: somethingsomethingpfp
+
+Hi, meg, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 2
+Please enter your new password: newpassword!
+
+Hi, meg, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 3
+Would you like to make a story or reel? Enter 's' or 'story' for the former, 'r' or 'reel for the latter: somethingthatisntright
+Your input was invalid, please try again. 
+Would you like to make a story or reel? Enter 's' or 'story' for the former, 'r' or 'reel for the latter: q
+Your input was invalid, please try again. 
+Would you like to make a story or reel? Enter 's' or 'story' for the former, 'r' or 'reel for the latter: 293
+Your input was invalid, please try again. 
+Would you like to make a story or reel? Enter 's' or 'story' for the former, 'r' or 'reel for the latter: s
+Enter the title of the post: story title 1
+Emter the media URL of the post: mediaurlhere
+Enter the video length of the post (in seconds): -1
+Error, the minimum amount of time is 1 second and the maximum amount of time is 60 seconds. Please try again. 
+Enter the video length of the post (in seconds): 61
+Error, the minimum amount of time is 1 second and the maximum amount of time is 60 seconds. Please try again. 
+Enter the video length of the post (in seconds): 60
+Successfully created the story. 
+
+Hi, meg, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 3
+Would you like to make a story or reel? Enter 's' or 'story' for the former, 'r' or 'reel for the latter: story
+Enter the title of the post: story title 2
+Emter the media URL of the post: storymediaurl.mp4
+Enter the video length of the post (in seconds): 33
+Successfully created the story. 
+
+Hi, meg, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 3
+Would you like to make a story or reel? Enter 's' or 'story' for the former, 'r' or 'reel for the latter: r
+Enter the title of the post: reel title here
+Emter the media URL of the post: reeeeeelllll.mp4
+Enter the video length of the post (in seconds): -1
+Error, the minimum amount of time is 1 second and the maximum amount of time is 90 seconds. Please try again. 
+Enter the video length of the post (in seconds): 91
+Error, the minimum amount of time is 1 second and the maximum amount of time is 90 seconds. Please try again. 
+Enter the video length of the post (in seconds): 90
+Successfully created the reel. 
+
+Hi, meg, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 3
+Would you like to make a story or reel? Enter 's' or 'story' for the former, 'r' or 'reel for the latter: reel
+Enter the title of the post: reel title 2
+Emter the media URL of the post: reelmediaurlhere
+Enter the video length of the post (in seconds): 11
+Successfully created the reel. 
+
+Hi, meg, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 4
+Story details: 
+The amount of time left to view this story is: 23 hours.
+Title: story title 1
+Duration (seconds): 60
+Likes: 16807
+Url: mediaurlhere
+
+Story details: 
+The amount of time left to view this story is: 23 hours.
+Title: story title 2
+Duration (seconds): 33
+Likes: 282475249
+Url: storymediaurl.mp4
+
+Reel details: 
+Title: reel title here
+Duration (seconds): 90
+Likes: 1622650073
+Url: reeeeeelllll.mp4
+
+Reel details: 
+Title: reel title 2
+Duration (seconds): 11
+Likes: 984943658
+Url: reelmediaurlhere
+
+
+Hi, meg, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 5
+Enter in a number k to return the post at that index: 2
+Story details: 
+The amount of time left to view this story is: 23 hours.
+Title: story title 2
+Duration (seconds): 33
+Likes: 282475249
+Url: storymediaurl.mp4
+
+
+Hi, meg, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 6
+Enter in a number k to edit the post at that index: 3
+Enter the new title of the post: new title yay!
+
+Hi, meg, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 5
+Enter in a number k to return the post at that index: 3
+Story details: 
+The amount of time left to view this story is: 23 hours.
+Title: new title yay!
+Duration (seconds): 33
+Likes: 282475249
+Url: storymediaurl.mp4
+
+
+Hi, meg, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 7
+Enter in a number k to edit the post at that index: 2
+You have successfully added filters, music, stickers, and effects to this story!
+
+Hi, meg, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 7
+Enter in a number k to edit the post at that index: 4
+You have successfully added a filter, AR effects, and music to this reel!
+
+Hi, meg, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 8
+Enter in a number k to delete the post at that index: 2
+
+Hi, meg, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 4
+Story details: 
+The amount of time left to view this story is: 23 hours.
+Title: story title 1
+Duration (seconds): 60
+Likes: 16807
+Url: mediaurlhere
+
+Reel details: 
+Title: reel title here
+Duration (seconds): 90
+Likes: 1622650073
+Url: reeeeeelllll.mp4
+
+Reel details: 
+Title: reel title 2
+Duration (seconds): 11
+Likes: 984943658
+Url: reelmediaurlhere
+
+
+Hi, meg, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 0
+Logging you out. 

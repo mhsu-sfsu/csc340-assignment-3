@@ -1,0 +1,92 @@
+Welcome to Instagram340:
+Please enter a username for your account: tester
+
+Please enter an email address for your account: test@test.com
+
+Please enter a password for your account: testingpw
+
+Please enter a short bio for your account: tester
+
+Please enter the path to the profile picture for your account: no
+
+Hi, tester, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 4
+You haven't created any posts.
+
+Hi, tester, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 5
+Enter in a number k to return the post at that index: 0
+There are no posts to display at this time. Please create one before trying again. 
+
+Hi, tester, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 6
+Enter in a number k to modify the post at that index: 0
+There are no posts to modify at this time. Please create one before trying again. 
+
+Hi, tester, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 7
+Enter in a number k to edit the post at that index: 0
+There are no posts to edit at this time. Please try again when you have created a post.
+
+Hi, tester, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 8
+Enter in a number k to delete the post at that index: 0
+There are no posts to delete at this time. Please try again when you have created a post.
+
+Hi, tester, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Post
+4. Display All Posts
+5. Display Kth Post
+6. Modify Post
+7. Edit Post
+8. Delete Post
+0. Logout
+Choice: 0
+Logging you out. 
