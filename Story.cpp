@@ -17,13 +17,13 @@ void Story::edit_post(){
     cout << "You have successfully added filters, music, stickers, and effects to this story!" << endl;
 }
 // Displays the details of the story, including the amount of time (in hours) that is left before the story expires.
-void Story::display_post(Story specificstory){
+void Story::display_post(){
     chrono::steady_clock::time_point time_made = Post::get_timestamp();
 
     int time_left = Post::time_left();
 
     if (time_left > 0){
-        cout << specificstory;
+        cout << *this;
     } else {
         cout << "Sorry, this story has expired.\n\n";
     }

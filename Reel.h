@@ -15,6 +15,9 @@ class Reel : public Post{
         // Functions that will override parent class (runtime polymorphism)
         void edit_post();
         void display_post();
+
+        friend ostream& operator<<(ostream& os, string& message);
+        friend ostream& operator<<(ostream& os, Reel& specificreel);
 };
 
 #endif

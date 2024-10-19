@@ -14,7 +14,7 @@ class Story : public Post{
 
         // Functions that will override parent class (runtime polymorphism)
         void edit_post();
-        void display_post(Story specificstory);
+        void display_post();
         int time_left();
 
         // Operator overloading functions

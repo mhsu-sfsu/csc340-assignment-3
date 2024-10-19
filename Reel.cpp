@@ -21,9 +21,19 @@ void Reel::edit_post(){
 
 // Displays the details of the reel.
 void Reel::display_post(){
-    cout << "Reel details: " << endl;
-    cout << "Title: " << Post::get_title() << endl;
-    cout << "Duration (seconds): " << Post::get_duration() << endl;
-    cout << "Likes: " << Post::get_likes() << endl;
-    cout << "Url: " << Post::get_url() << endl << endl;
+    cout << *this;
 }
+
+inline ostream& operator<<(ostream& os, Reel& specificreel) {
+    os << "Reel details: \n" 
+       << "Title: " << specificreel.get_title() << "\n"
+       << "Duration (seconds): " << specificreel.get_duration() << "\n"
+       << "Likes: " << specificreel.get_likes() << "\n"
+       << "Url: " << specificreel.get_url() << "\n\n";
+	return os;
+} 
+
+inline ostream& operator<<(ostream& os, string& message) {
+	os << message;
+	return os;
+} 
