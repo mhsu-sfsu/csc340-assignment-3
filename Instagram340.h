@@ -1,5 +1,9 @@
 #include "LinkedBagDS/LinkedBag.h"
 #include "User.h"
+#include <iostream>
+
+#ifndef INSTAGRAM340_H
+#define INSTAGRAM340_H
 
 class Instagram340 {
 	private:
@@ -16,4 +20,8 @@ class Instagram340 {
 
 		// Get user based on position in list
 		shared_ptr<User> getUser(const int& indexK);
+
+		friend ostream& operator<<(ostream& outputStream, const LinkedBag<User>& outputList);
 };
+
+#endif
