@@ -237,8 +237,6 @@ int main(){
 	// With this implementation, the application will only have one user
 	Instagram340 instagram; 
 
-	cout << "\nWelcome to Instagram340:" << endl;
-
 	// cout << "Please enter a username for your account: ";
 	// string username;
 	// getline(cin >> ws, username);
