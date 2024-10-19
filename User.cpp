@@ -44,11 +44,8 @@ void User::set_bio(string newBio) {bio = newBio;}
 void User::set_profilepicture(string newProfilepicture) {profilepicture = newProfilepicture;}
 
 // Display function to print out user information (minus the user's password)
-void User::display_info(){
-	cout << "Username: " << get_username() << endl;
-	cout << "Email address: " << get_email() << endl;
-	cout << "Bio: " << get_bio() << endl;
-	cout << "Profile picture: " << get_profilepic() << endl;
+void User::display_info(User user){
+	cout << user;
 }
 
 // Create functions for reels and stories respectively. 
@@ -78,7 +75,10 @@ void User::display_all_posts(){
 			// Checking condition because while loops only check at the beginning of the loop, the validity of the statement can change.
 			if (curptr != nullptr) nextptr = nextptr->getNext(); 
 		}
-	} else cout << "You haven't created any posts." << endl;
+	} else{
+		string msg = "You haven't created any posts.";
+		cout << msg;
+	}
 }
 
 // To display a specific post, the function takes an index as the input.
@@ -157,3 +157,17 @@ void User::delete_post(int postnum){ // user remove method from node class to de
 bool User::operator==(const User& otherUser) const {
 	return (User::username == otherUser.username) && (User::emailaddress == otherUser.emailaddress);
 }
+
+// input/output stream overloading
+inline ostream& operator<<(ostream& os, User& specificuser) {
+	os << "Username: " << specificuser.username << endl
+	   << "Email address: " << specificuser.emailaddress << endl
+	   << "Bio: " << specificuser.bio << endl
+	   << "Profile picture: " << specificuser.profilepicture << endl;
+	return os;
+} 
+
+inline ostream& operator<<(ostream& os, string& message) {
+	os << message << endl;
+	return os;
+} 

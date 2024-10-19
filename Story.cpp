@@ -17,19 +17,34 @@ void Story::edit_post(){
     cout << "You have successfully added filters, music, stickers, and effects to this story!" << endl;
 }
 // Displays the details of the story, including the amount of time (in hours) that is left before the story expires.
-void Story::display_post(){
+void Story::display_post(Story specificstory){
     chrono::steady_clock::time_point time_made = Post::get_timestamp();
 
     int time_left = Post::time_left();
 
     if (time_left > 0){
-        cout << "Story details: " << endl;
-        cout << "The amount of time left to view this story is: " << time_left << " hours." << endl;
-        cout << "Title: " << Post::get_title() << endl;
-        cout << "Duration (seconds): " << Post::get_duration() << endl;
-        cout << "Likes: " << Post::get_likes() << endl;
-        cout << "Url: " << Post::get_url() << endl << endl;
+        cout << specificstory;
     } else {
-        cout << "Sorry, this story has expired." << endl << endl;
+        cout << "Sorry, this story has expired.\n\n";
     }
 }
+
+int Story::time_left(){
+    int timeleft = Post::time_left();
+    return timeleft;
+}
+
+inline ostream& operator<<(ostream& os, Story& specificstory) {
+    os << "Story details: \n" 
+       << "The amount of time left to view this story is: " << specificstory.time_left() << " hours.\n"
+       << "Title: " << specificstory.get_title() << "\n"
+       << "Duration (seconds): " << specificstory.get_duration() << "\n"
+       << "Likes: " << specificstory.get_likes() << "\n"
+       << "Url: " << specificstory.get_url() << "\n\n";
+	return os;
+} 
+
+inline ostream& operator<<(ostream& os, string& message) {
+	os << message;
+	return os;
+} 

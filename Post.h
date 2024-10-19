@@ -52,6 +52,9 @@ class Post{
         // Operator overloading function prototype:
         bool operator==(const Post& otherPost) const; 
 
+
+        // Operator overloading functions
+        friend ostream& operator<<(ostream& os, string& message);
 };
 
 #endif

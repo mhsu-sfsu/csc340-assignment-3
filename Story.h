@@ -14,7 +14,12 @@ class Story : public Post{
 
         // Functions that will override parent class (runtime polymorphism)
         void edit_post();
-        void display_post();
+        void display_post(Story specificstory);
+        int time_left();
+
+        // Operator overloading functions
+        friend ostream& operator<<(ostream& os, string& message);
+        friend ostream& operator<<(ostream& os, Story& specificstory);
 };
 
 #endif

@@ -56,7 +56,7 @@ class User{
         void create_story(string title, int duration, string url);
         
         // Display functions
-        void display_info();
+        void display_info(User user);
         void display_all_posts();
         void display_specific_post(int postnum);
 
@@ -69,8 +69,11 @@ class User{
 
         // Given comparison function
         bool operator==(const User& otherUser) const; 
-};
 
+        // Operator overloading friend function
+        friend ostream& operator<<(ostream& os, string& message);
+        friend ostream& operator<<(ostream& os, User& specificuser);
+};
 
 #endif
 

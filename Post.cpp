@@ -72,3 +72,10 @@ int Post::computeTimeToExpiration() const{
 
 	return timeToExpiration;
 }
+
+// Operator Overloading functions
+
+inline ostream& operator<<(ostream& os, string& message) {
+	os << message;
+	return os;
+} 
